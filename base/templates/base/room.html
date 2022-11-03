@@ -2,5 +2,17 @@
 {% block content %}
 
 <h1> {{room.name}} </h1>
+<p>{{room.description}}</p>
+
+
+<div class="commit-wrapper">#enhancing comments to classes
+    <h3>Conversation</h3>
+    <hr>
+    {% for message in messages %}
+        <div>
+            <small>@{{message.user}} {{message.created}}</small>
+        </div>
+    { % endfor %}
+</div>
 
 {% endblock content %}
